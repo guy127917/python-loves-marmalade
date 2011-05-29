@@ -15,7 +15,7 @@ else
 }
 
 subproject python
-define SWIGPYTHON_BUILTIN
+#define SWIGPYTHON_BUILTIN
 
 files
 {
