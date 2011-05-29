@@ -1,0 +1,28 @@
+#!/usr/bin/env mkb
+commands
+{
+    "swig -python -classic FFT.i"
+    "../../copylibs.py"
+}
+
+if {{ defined WINDOWS }}
+{
+    command "copy fft.py data\lib\python2.7\site-packages"
+}
+else
+{
+    command "cp fft.py data/lib/python2.7/site-packages"
+}
+
+subproject python
+define SWIGPYTHON_BUILTIN
+
+files
+{
+    swig_test.c
+    FFT.c
+    fft_wrap.c
+    
+    (data)
+    swig_test.py
+}

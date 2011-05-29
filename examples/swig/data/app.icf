@@ -1,0 +1,4 @@
+[s3e]
+TraceToConsole=0
+MemSize=64000000
+MemSize7=20000
