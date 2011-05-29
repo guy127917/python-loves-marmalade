@@ -3,6 +3,8 @@
 #package python
 subproject python
 
+command "../../copylibs.py"
+
 files
 {
 	python.c
