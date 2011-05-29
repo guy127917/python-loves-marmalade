@@ -1,0 +1,12 @@
+#!/usr/bin/env mkb
+
+command "../../copylibs.py"
+subproject python
+
+files
+{
+	(".")
+	python.c
+    ("data")
+    test.py
+}

@@ -10,6 +10,7 @@ upstream
 subproject
 {
 	zlib
+    #s3e_bindings
 }
 
 includepaths

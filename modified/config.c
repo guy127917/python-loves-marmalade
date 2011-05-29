@@ -58,7 +58,10 @@ extern void init_functools(void);
 extern void init_json(void);
 extern void initzlib(void);
 
-//extern void init_s3e(void);
+#ifdef S3E_BINDINGS
+extern void init_s3e(void);
+#endif
+
 //extern void init_multibytecodec(void);
 //extern void init_codecs_cn(void);
 //extern void init_codecs_hk(void);
@@ -89,7 +92,9 @@ struct _inittab _PyImport_Inittab[] = {
 #endif
     {"binascii", initbinascii},
     {"cmath", initcmath},
-    //{"_s3e", init_s3e},
+#ifdef S3E_BINDINGS
+    {"_s3e", init_s3e},
+#endif
     {"errno", initerrno},
     {"future_builtins", initfuture_builtins},
     {"gc", initgc},
