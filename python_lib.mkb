@@ -2,15 +2,21 @@
 option lib
 target python
 
+upstream
+{
+   url="http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tar.bz2" 
+}
+
 subproject
 {
-	python
 	zlib
 }
 
 includepaths
 {
+    "modified"
 	"upstream/Python"
+    "upstream/Include"
 }
 
 defines
@@ -20,11 +26,9 @@ defines
 
 files
 {
-	(.)
+	(modified)
 	pyconfig.h
 	config.c
-
-    (modified)
     Python/pythonrun.c
     Modules/getpath.c
 

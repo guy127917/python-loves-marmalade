@@ -5,7 +5,7 @@ upstream
     url="http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tar.bz2"
 }
 
-command "./upstream.sh"
+command "./copylibs.sh"
 
 files
 {
@@ -15,5 +15,5 @@ files
 includepaths
 {
         "upstream/Include"
-        .
+        "modified"
 }

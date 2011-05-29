@@ -1,0 +1,7 @@
+[commandline]
+argv[1]=test.py
+
+[s3e]
+console=1
+TraceToConsole=0
+MemSize7=20000

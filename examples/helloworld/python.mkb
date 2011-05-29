@@ -1,0 +1,9 @@
+#!/usr/bin/env mkb
+
+#package python
+subproject python
+
+files
+{
+	python.c
+}
