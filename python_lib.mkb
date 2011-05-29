@@ -23,11 +23,15 @@ includepaths
 defines
 {
 	__rtems__
+    PYTHON_VERBOSE=1
 }
 
 files
 {
-	(modified)
+    (.)
+    python.defines.txt
+
+    (modified)
 	pyconfig.h
 	config.c
     Python/pythonrun.c

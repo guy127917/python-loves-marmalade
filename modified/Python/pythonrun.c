@@ -74,7 +74,7 @@ extern void _PyGILState_Fini(void);
 #endif /* WITH_THREAD */
 
 int Py_DebugFlag; /* Needed by parser.c */
-int Py_VerboseFlag=1; /* Needed by import.c */
+int Py_VerboseFlag=PYTHON_VERBOSE; /* Needed by import.c */
 int Py_InteractiveFlag; /* Needed by Py_FdIsInteractive() below */
 int Py_InspectFlag; /* Needed to determine whether to exit at SystemError */
 int Py_NoSiteFlag; /* Suppress 'import site' */
