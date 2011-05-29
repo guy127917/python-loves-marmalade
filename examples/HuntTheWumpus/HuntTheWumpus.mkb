@@ -1,0 +1,17 @@
+#!/usr/bin/env mkb
+
+command "../../copylibs.py"
+subproject python
+
+files
+{
+    (.)
+    python.c
+    
+    ("data")
+    game.py
+    generate_maze.py
+    maze.py
+    piglatin.py
+    play.py
+}
