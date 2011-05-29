@@ -13,8 +13,7 @@ def foo():
         i += 1
 
 def run():
-    for i in xrange(10):
-        print 'hello, this is python code speaking'
+    print 'hello, this is python code speaking'
 
     count = 0
 
