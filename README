@@ -1,3 +1,5 @@
 This project is a port of python 2.7 for the Airplay SDK. 
 
 Requires Airplay 4.3 or higher to build (requires some patches to come...)
+
+Note that currently examples only build when the current working directory is their directory (i.e don't run example MKB files from outside their directories)
