@@ -8,5 +8,6 @@
 %include "s3e.h"
 
 %import "carrays.i"
-%import "cdata.i"
-%array_class(int, intArray);
+%array_class(uint16, uint16Array);
+
+%include "cdata.i"
