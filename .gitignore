@@ -1,7 +1,9 @@
 *.pyc
 .DS_Store
-iwtrace.txti
+iwtrace.txt
 build_*
 *_wrap.c
 development.icf
 run_*.py
+data/lib
+data/include
