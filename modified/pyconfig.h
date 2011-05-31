@@ -262,7 +262,7 @@
 #define HAVE_SIGACTION 1
 
 /* Define to 1 if you have the `siginterrupt' function. */
-// #define HAVE_SIGINTERRUPT 1
+#define HAVE_SIGINTERRUPT 1
 
 /* Define to 1 if you have the <signal.h> header file. */
 #define HAVE_SIGNAL_H 1

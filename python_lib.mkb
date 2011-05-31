@@ -26,6 +26,8 @@ defines
     PYTHON_VERBOSE=1
 }
 
+option cflags="-Wfatal-errors"
+
 files
 {
     (.)
@@ -35,6 +37,7 @@ files
     pyconfig.h
     config.c
     Python/pythonrun.c
+    Python/import.c
     Modules/getpath.c
 
     ["Python"]
@@ -74,7 +77,7 @@ files
     getplatform.c
     getversion.c
     graminit.c
-    import.c
+    #import.c
     #importdl.c
     #mactoolboxglue.c
     marshal.c
