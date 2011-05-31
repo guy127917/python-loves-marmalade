@@ -9,20 +9,20 @@ upstream
 
 subproject
 {
-	zlib
+    third_party/zlib
     s3e_bindings
 }
 
 includepaths
 {
     "modified"
-	"upstream/Python"
+    "upstream/Python"
     "upstream/Include"
 }
 
 defines
 {
-	__rtems__
+    __rtems__
     PYTHON_VERBOSE=1
 }
 
@@ -32,13 +32,13 @@ files
     python.defines.txt
 
     (modified)
-	pyconfig.h
-	config.c
+    pyconfig.h
+    config.c
     Python/pythonrun.c
     Modules/getpath.c
 
-	["Python"]
-	("upstream/Python")
+    ["Python"]
+    ("upstream/Python")
     Python-ast.c
     _warnings.c
     asdl.c
@@ -91,7 +91,7 @@ files
     pystrtod.c
     #pythonrun.c
     #sigcheck.c
-    strdup.c
+    #strdup.c
     #strtod.c
     structmember.c
     symtable.c
@@ -100,9 +100,9 @@ files
     traceback.c
 
 
-	["Include"]
-	("upstream/Include")
-	Python-ast.h
+    ["Include"]
+    ("upstream/Include")
+    Python-ast.h
     Python.h
     abstract.h
     asdl.h
@@ -195,9 +195,9 @@ files
     weakrefobject.h
     
 
-	["Modules"]
-	("upstream/Modules")
-	_bisectmodule.c
+    ["Modules"]
+    ("upstream/Modules")
+    _bisectmodule.c
     #_bsddb.c
     _codecsmodule.c
     _collectionsmodule.c
@@ -299,8 +299,8 @@ files
     zlibmodule.c
     
 
-	["Objects"]
-	("upstream/Objects")
+    ["Objects"]
+    ("upstream/Objects")
     abstract.c
     boolobject.c
     bufferobject.c
@@ -341,8 +341,8 @@ files
     unicodeobject.c
     weakrefobject.c
 
-	["Parser"]
-	("upstream/Parser")
+    ["Parser"]
+    ("upstream/Parser")
     acceler.c
     bitset.c
     firstsets.c
@@ -360,5 +360,4 @@ files
     printgrammar.c
     tokenizer.c
     tokenizer_pgen.c
-
 }
