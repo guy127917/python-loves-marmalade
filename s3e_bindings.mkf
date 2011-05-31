@@ -1,5 +1,5 @@
 
-command "./make_bindings.py"
+command "./make_bindings.py s3e"
 
 files
 {
