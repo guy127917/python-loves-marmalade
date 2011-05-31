@@ -52,6 +52,7 @@ def run():
     time.sleep(1)
 
     s3e.s3eVideoPlay("angel_fish.jpg", 0, 0, 0, 320, 320)
+    s3e.s3eAudioPlay("trumpet.wav", 0)
     time.sleep(3)
     
 
