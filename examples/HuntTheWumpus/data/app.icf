@@ -2,7 +2,9 @@
 argv[1]=game.py
 
 [s3e]
-console=1
+Console=1
+ConsoleRows=25
 TraceToConsole=0
 MemSize=64000000
 MemSize7=20000
+iPhoneUseCoreSurface=1

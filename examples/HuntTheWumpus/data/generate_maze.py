@@ -33,8 +33,7 @@ def generate_maze(width, height):
         direction = random.choice(possible_routes)
         m[pos].cut(direction)
         stack.append(go(pos, direction))
-        print ""
-        print ""
+        
         print m
         #time.sleep(0.02)
     return m
