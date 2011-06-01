@@ -1,0 +1,15 @@
+
+command "./make_bindings.py iwgl"
+command "./make_bindings.py gles"
+
+subproject iwgl
+
+define IWGL_BINDINGS
+
+files
+{
+    ["s3e wrapper"]
+    (modified)
+    gles_wrap.c
+    iwgl_wrap.c
+}

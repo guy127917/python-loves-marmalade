@@ -57,9 +57,14 @@ extern void initdatetime(void);
 extern void init_functools(void);
 extern void init_json(void);
 extern void initzlib(void);
-
+extern void init_socket(void);
 #ifdef S3E_BINDINGS
 extern void init_s3e(void);
+#endif
+
+#ifdef IWGL_BINDINGS
+extern void init_gles(void);
+extern void init_iwgl(void);
 #endif
 
 //extern void init_multibytecodec(void);
@@ -95,9 +100,14 @@ struct _inittab _PyImport_Inittab[] = {
 #ifdef S3E_BINDINGS
     {"_s3e", init_s3e},
 #endif
+#ifdef IWGL_BINDINGS
+    {"_gles", init_gles},
+    {"_iwgl", init_iwgl},
+#endif
     {"errno", initerrno},
     {"future_builtins", initfuture_builtins},
     {"gc", initgc},
+    {"socket", init_socket},
 #ifndef MS_WINI64
     {"imageop", initimageop},
     //{"nt", initnt}, /* Use the NT os functions, not posix */
