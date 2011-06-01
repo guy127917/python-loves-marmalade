@@ -71,12 +71,8 @@ def run():
             fprintf( stderr, "testgl: OpenGL error: %#x\n", gl_error );
 
         # Allow the user to see what's happening 
-        if slowly:
-            time.sleep(0.02)
-        else:
-            s3e.s3eDeviceYield(0);
-    
-    time.sleep(3)
+        time.sleep(0.1)
+        done = (datetime.now() - start_time).seconds > 3
     IwGLTerminate()
 
 def getCube():
