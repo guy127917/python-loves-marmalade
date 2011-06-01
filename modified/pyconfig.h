@@ -20,7 +20,7 @@
 /* #undef C_THREADS */
 
 /* Define if --enable-ipv6 is specified */
-#define ENABLE_IPV6 1
+//#define ENABLE_IPV6 1
 
 /* Define if getpgrp() must be called as getpgrp(0). */
 /* #undef GETPGRP_HAVE_ARG */
@@ -130,6 +130,8 @@
 
 /* Define if you have the 'inet_aton' function. */
 #define HAVE_INET_ATON 1
+
+#define HAVE_INET_PTON 1
 
 /* Define to 1 if you have the <io.h> header file. */
 /* #undef HAVE_IO_H */
