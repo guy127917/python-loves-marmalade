@@ -8,8 +8,8 @@ run_*.py
 data/lib
 data/include
 Python-2.7.1.tar.bz2
-examples/s3e/data/include/
-examples/s3e/data/lib/
-lib/
-modified/Lib/
-upstream/
+examples/*/data/include/
+examples/*/data/lib/
+modified
+lib
+upstream

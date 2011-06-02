@@ -4,7 +4,8 @@ target python
 
 upstream
 {
-   url="http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tar.bz2" 
+    url="http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tar.bz2"
+    local=modified
 }
 
 subproject
@@ -14,9 +15,9 @@ subproject
 
 includepaths
 {
-    "modified"
-    "upstream/Python"
-    "upstream/Include"
+    modified
+    modified/Python
+    modified/Include
 }
 
 defines
@@ -29,19 +30,17 @@ option cflags="-Wfatal-errors"
 
 files
 {
-    (.)
     python.defines.txt
 
     (modified)
     pyconfig.h
-    Python/pythonrun.c
-    Python/import.c
-    Modules/getpath.c
 
     ["Python"]
-    ("upstream/Python")
+    (modified/Python)
     Python-ast.c
     _warnings.c
+    pythonrun.c
+    import.c
     asdl.c
     ast.c
     atof.c
@@ -100,9 +99,8 @@ files
     thread.c
     traceback.c
 
-
     ["Include"]
-    ("upstream/Include")
+    (modified/Include)
     Python-ast.h
     Python.h
     abstract.h
@@ -194,10 +192,9 @@ files
     unicodeobject.h
     warnings.h
     weakrefobject.h
-    
 
     ["Modules"]
-    ("upstream/Modules")
+    (modified/Modules)
     _bisectmodule.c
     #_bsddb.c
     _codecsmodule.c
@@ -250,7 +247,7 @@ files
     #getaddrinfo.c
     getbuildinfo.c
     #getnameinfo.c
-    #getpath.c
+    getpath.c
     #glmodule.c
     #grpmodule.c
     imageop.c
@@ -298,10 +295,9 @@ files
     yuvconvert.c
     zipimport.c
     zlibmodule.c
-    
 
     ["Objects"]
-    ("upstream/Objects")
+    (modified/Objects)
     abstract.c
     boolobject.c
     bufferobject.c
@@ -343,7 +339,7 @@ files
     weakrefobject.c
 
     ["Parser"]
-    ("upstream/Parser")
+    (modified/Parser)
     acceler.c
     bitset.c
     firstsets.c
