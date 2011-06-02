@@ -14,12 +14,12 @@
 }
 
 %typemap(in) (const GLvoid* pointer) {
-    double temp[2048];
+    float temp[2048];
     int i;
     for (i = 0; i < PySequence_Length($input); i++) {
         PyObject *o = PySequence_GetItem($input,i);
         if (PyNumber_Check(o)) {
-            temp[i] = (double) PyFloat_AsDouble(o);
+            temp[i] = (float) PyFloat_AsDouble(o);
         } else {
             PyErr_SetString(PyExc_ValueError,"Sequence elements must be numbers");      
             return NULL;

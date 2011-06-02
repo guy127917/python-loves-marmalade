@@ -1,8 +1,9 @@
 #!/usr/bin/env mkb
 
 command "../../copylibs.py"
+
+subproject iwgl_bindings
 subproject python
-subproject iwgl
 
 files
 {
