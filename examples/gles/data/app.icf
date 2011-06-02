@@ -5,3 +5,4 @@ argv[1]=test.py
 TraceToConsole=0
 MemSize=64000000
 MemSize7=20000
+StackSize=1000000

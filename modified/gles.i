@@ -14,7 +14,7 @@
 }
 
 %typemap(in) (const GLvoid* pointer) {
-    float temp[2048];
+    static float temp[2048];
     int i;
     for (i = 0; i < PySequence_Length($input); i++) {
         PyObject *o = PySequence_GetItem($input,i);
