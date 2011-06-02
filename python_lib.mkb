@@ -10,8 +10,6 @@ upstream
 subproject
 {
     third_party/zlib
-    s3e_bindings
-    iwgl_bindings
 }
 
 includepaths
@@ -36,7 +34,6 @@ files
 
     (modified)
     pyconfig.h
-    config.c
     Python/pythonrun.c
     Python/import.c
     Modules/getpath.c

@@ -5,13 +5,20 @@ upstream
     url="http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tar.bz2"
 }
 
+subprojects
+{
+    s3e_bindings
+}
+
 files
 {
-        python.defines.txt
+    python.defines.txt
+    (modified)
+    config.c
 }
 
 includepaths
 {
-        "upstream/Include"
-        "modified"
+    "upstream/Include"
+    "modified"
 }
