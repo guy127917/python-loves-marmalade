@@ -70,9 +70,16 @@ def run():
         if gl_error != GL_NO_ERROR:
             fprintf( stderr, "testgl: OpenGL error: %#x\n", gl_error );
 
+        frames += 1
         # Allow the user to see what's happening 
-        time.sleep(0.2)
-        done = (datetime.now() - start_time).seconds > 5
+        #time.sleep(0.01)
+        s3e.s3eDeviceYield(10);
+        duration = datetime.now() - start_time
+        if duration.seconds > 3:
+            print duration
+            print frames
+            print "%f FPS" % (frames/duration.seconds)
+
     IwGLTerminate()
 
 def getCube():
