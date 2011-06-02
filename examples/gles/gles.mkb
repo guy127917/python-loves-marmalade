@@ -2,13 +2,13 @@
 
 command "../../copylibs.py"
 
-subproject iwgl_bindings
-subproject python
+subproject ../../iwgl_bindings
+subproject ../../python
 
 files
 {
-	(".")
-	python.c
+    python.c
+
     ("data")
     test.py
 }

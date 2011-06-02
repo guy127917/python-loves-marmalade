@@ -12,6 +12,10 @@ print "Copying python runtime libraries..."
 if not os.path.exists("data/lib/python2.7"):
     shutil.copytree(join(root, "modified/Lib"), "data/lib/python2.7")
 
+for f in os.listdir(join(root, "modified/Lib")):
+    if os.path.isfile(join(root, "modified/Lib", f)):
+        shutil.copyfile(join(root, "modified/Lib", f), join("data/lib/python2.7/", f))
+
 if not os.path.exists("data/lib/python2.7/config"):
     shutil.copytree(join(root, "modified/config"), "data/lib/python2.7/config")
 

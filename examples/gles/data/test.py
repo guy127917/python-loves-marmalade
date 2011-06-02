@@ -5,25 +5,24 @@ import threading
 from datetime import datetime
 
 import s3e
+import iwgl
 from gles import *
-from iwgl import *
-
 
 def run():
     print 'hello, this is python code speaking'
 
-    IwGLInit()
-    
+    iwgl.IwGLInit()
+
     print "Screen BPP  : %d\n" % (s3e.s3eSurfaceGetInt(s3e.S3E_SURFACE_PIXEL_TYPE) & s3e.S3E_SURFACE_PIXEL_SIZE_MASK)
     print "\n"
-    print "Vendor     : %s\n" % glGetString( GL_VENDOR ) 
-    print "Renderer   : %s\n" % glGetString( GL_RENDERER ) 
-    print "Version    : %s\n" % glGetString( GL_VERSION )
-    print "Extensions : %s\n" % glGetString( GL_EXTENSIONS )
+    print "Vendor     : %s\n" % glGetString(GL_VENDOR)
+    print "Renderer   : %s\n" % glGetString(GL_RENDERER)
+    print "Version    : %s\n" % glGetString(GL_VERSION)
+    print "Extensions : %s\n" % glGetString(GL_EXTENSIONS)
     print "\n"
 
-    glMatrixMode( GL_MODELVIEW );
-    glLoadIdentity( );
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
 
     glEnable(GL_DEPTH_TEST);
 
@@ -31,7 +30,7 @@ def run():
 
     glShadeModel(GL_SMOOTH);
 
-    start_time = datetime.now() 
+    start_time = datetime.now()
     frames = 0;
     done = False
     cube, color = getCube()
@@ -39,13 +38,13 @@ def run():
     while not done:
         #To take advantage of IwGL's automatic screen rotation support, the
         #projection matrix and viewport should be set up every frame.
-        w = IwGLGetInt(IW_GL_WIDTH);
-        h = IwGLGetInt(IW_GL_HEIGHT);
-        glViewport( 0, 0, w, h );
-        glMatrixMode( GL_PROJECTION );
-        glLoadIdentity( );
+        w = iwgl.IwGLGetInt(iwgl.IW_GL_WIDTH);
+        h = iwgl.IwGLGetInt(iwgl.IW_GL_HEIGHT);
+        glViewport(0, 0, w, h);
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
 
-        glOrthof( -2.0, 2.0, -2.0, 2.0, -20.0, 20.0 );
+        glOrthof(-2.0, 2.0, -2.0, 2.0, -20.0, 20.0);
 
         # Do our drawing, too.
         glClearColor(0.0, 0.0, 0.0, 1.0);
@@ -62,13 +61,13 @@ def run():
         glRotatef(5.0, 1.0, 1.0, 1.0);
 
         # Call IwGL swap instead of egl directly
-        IwGLSwapBuffers();
+        iwgl.IwGLSwapBuffers();
 
         # Check for error conditions. #
         gl_error = glGetError();
 
         if gl_error != GL_NO_ERROR:
-            fprintf( stderr, "testgl: OpenGL error: %#x\n", gl_error );
+            fprintf(stderr, "testgl: OpenGL error: %#x\n", gl_error);
 
         frames += 1
         # Allow the user to see what's happening 
@@ -80,7 +79,7 @@ def run():
             print frames
             print "%f FPS" % (frames/duration.seconds)
 
-    IwGLTerminate()
+    iwgl.IwGLTerminate()
 
 def getCube():
     cube = [
@@ -146,5 +145,6 @@ def getCube():
         0.0,  0.0,  0.0, 1.0,  # 2
     ]
     return (cube, colors)
+
 if __name__ == "__main__":
     run()

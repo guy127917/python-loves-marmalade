@@ -1,4 +1,3 @@
-
 command "./make_bindings.py iwgl"
 command "./make_bindings.py gles"
 

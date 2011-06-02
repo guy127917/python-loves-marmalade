@@ -24,3 +24,5 @@ if not os.path.exists("modified/Lib"):
 if os.path.exists("modified/Lib/%s.py" % module):
     os.remove("modified/Lib/%s.py" % module)
 shutil.move("modified/%s.py" % module, "modified/Lib/%s.py" % module)
+
+print os.getcwd()
