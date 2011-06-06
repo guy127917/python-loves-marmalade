@@ -1,0 +1,35 @@
+#!/usr/bin/env mkb
+
+command "../../copylibs.py"
+
+subproject ../../iwgx_bindings
+subproject ../../python
+
+files
+{
+    python.cpp
+
+    ("data")
+    test.py
+}
+
+subproject derbh
+
+assets
+{
+     (data)
+     include
+     lib/python2.7/config/MakeFile
+     test.py
+
+     (data-ram)
+     lib
+
+     (data-ram\data-gles1)
+     model.group.bin
+}
+
+deployments
+{
+    auto-derbh=1
+}

@@ -43,7 +43,7 @@ files
     import.c
     asdl.c
     ast.c
-    atof.c
+    #atof.c
     bltinmodule.c
     ceval.c
     codecs.c

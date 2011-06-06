@@ -1,0 +1,10 @@
+// Source maya file: C:/dev/dev/main/gamedemo1/Art/Characters/FunkyVic/Models/FunckyVic_Rig.mb
+// Maya geometry export, written by IwEngineExporter.mll
+
+// Materials
+CIwMaterial
+{
+	name	"lambert12"
+	mapDiffuse	"vicFunk.bmp"
+}
+

@@ -1,0 +1,16 @@
+command "./make_bindings.py iwgx"
+
+subproject 
+{
+    iwgraphics
+    iwgx
+    iwgl_bindings
+}
+
+files
+{
+    ["s3e wrapper"]
+    (modified)
+    iwgx_wrap.cpp
+    iwgx.i
+}

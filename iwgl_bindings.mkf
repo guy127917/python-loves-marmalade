@@ -3,8 +3,6 @@ command "./make_bindings.py gles"
 
 subproject iwgl
 
-define IWGL_BINDINGS
-
 files
 {
     ["s3e wrapper"]

@@ -1,0 +1,7 @@
+CIwResGroup
+{
+	name	"Example"
+
+	// Load a single GEOM file, which implicitly loads an accompanying MTL file, which implcitly loads required textures
+	"./FunkyVic.geo"
+}

@@ -58,13 +58,17 @@ extern void init_functools(void);
 extern void init_json(void);
 extern void initzlib(void);
 extern void init_socket(void);
-#ifdef S3E_BINDINGS
+#ifdef IW_MKF_S3E_BINDINGS
 extern void init_s3e(void);
 #endif
 
-#ifdef IWGL_BINDINGS
+#ifdef IW_MKF_IWGL_BINDINGS
 extern void init_gles(void);
 extern void init_iwgl(void);
+#endif
+
+#ifdef IW_MKF_IWGX_BINDINGS
+extern void init_iwgx(void);
 #endif
 
 //extern void init_multibytecodec(void);
@@ -97,12 +101,15 @@ struct _inittab _PyImport_Inittab[] = {
 #endif
     {"binascii", initbinascii},
     {"cmath", initcmath},
-#ifdef S3E_BINDINGS
+#ifdef IW_MKF_S3E_BINDINGS
     {"_s3e", init_s3e},
 #endif
-#ifdef IWGL_BINDINGS
+#ifdef IW_MKF_IWGL_BINDINGS
     {"_gles", init_gles},
     {"_iwgl", init_iwgl},
+#endif
+#ifdef IW_MKF_IWGX_BINDINGS
+    {"_iwgx", init_iwgx},
 #endif
     {"errno", initerrno},
     {"future_builtins", initfuture_builtins},

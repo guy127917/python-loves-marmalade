@@ -13,6 +13,5 @@ files
 
 defines
 {
-    SWIGRUNTIME_DEBUG
-    S3E_BINDINGS
+    #SWIGRUNTIME_DEBUG
 }
