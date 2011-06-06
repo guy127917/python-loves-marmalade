@@ -1,5 +1,9 @@
 This project is a port of python 2.7 for the Airplay SDK. 
 
 Requires Airplay 4.3 or higher to build (requires some patches to come...)
+This project currently requires changes to some Airplay internals, which may not be possible on a standard install. We will address this as we improve support.
 
 Note that currently examples only build when the current working directory is their directory (i.e don't run example MKB files from outside their directories)
+
+Attribution for sound sample in s3e example goes to sorohanro 
+solo trumpet -09in F - 90bpm.wav (http://www.freesound.org/samplesViewSingle.php?id=77714)
