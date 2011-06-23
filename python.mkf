@@ -8,6 +8,7 @@ upstream
 subprojects
 {
     s3e_bindings
+    third_party/zlib
 }
 
 files

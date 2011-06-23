@@ -720,5 +720,9 @@
 #define STRICT_SYSV_CURSES /* Don't use ncurses extensions */
 #endif
 
+#ifdef I3D_OS_S3E
+#define HAVE_COPYSIGN
+#endif
+
 #endif /*Py_PYCONFIG_H*/
 

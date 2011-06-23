@@ -22,7 +22,7 @@ if module != "s3e":
     options = "-c++ -cpperraswarn"
     output = "-o modified/"+module + "_wrap.cpp"
 
-incpaths = " ".join("-I%s%s" % (os.environ['AIRPLAY_ROOT'], i) for i in includes)
+incpaths = " ".join("-I%s%s" % (os.environ['MARMALADE_ROOT'], i) for i in includes)
 # Create swig C bindings to s3e headers
 cmdline = "swig -python -classic -O -Idummy %s %s -includeall %s modified/%s.i" % (options, incpaths, output, module)
 print cmdline
