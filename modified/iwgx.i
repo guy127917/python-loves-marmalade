@@ -55,7 +55,7 @@
 %ignore IwTextParserAssertCallback;
 %ignore _ITXReadUnknown;
 %ignore IwDebugTraceLineVPrintf;
-%ignore CIwMaterial g_UserFlagNames;
+%ignore CIwMaterial::g_UserFlagNames;
 
 
 #undef IW_ALIGNED
